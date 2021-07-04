@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoTest]">
+  <listeners>
+    <listener class-name="com.inetbanking.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="BankingApp Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.intebanking.testCases.TC_LoginDDT_002">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="loginDDT" invocation-numbers="1 3 4"/>
+        </methods>
+      </class> <!-- com.intebanking.testCases.TC_LoginDDT_002 -->
+    </classes>
+  </test> <!-- BankingApp Test(failed) -->
+  <test thread-count="5" name="BankingApp firefox Test(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.intebanking.testCases.TC_AddCustomerTest_003">
+        <methods>
+          <include name="addNewCustomer"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.intebanking.testCases.TC_AddCustomerTest_003 -->
+      <class name="com.intebanking.testCases.TC_LoginDDT_002">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="loginDDT" invocation-numbers="1 3 4"/>
+        </methods>
+      </class> <!-- com.intebanking.testCases.TC_LoginDDT_002 -->
+    </classes>
+  </test> <!-- BankingApp firefox Test(failed) -->
+</suite> <!-- Failed suite [DemoTest] -->
